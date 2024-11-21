@@ -8,11 +8,8 @@ COPY .zshrc /root/.
 RUN chsh -s /usr/bin/zsh
 SHELL ["/usr/bin/zsh", "-c"]
 
-# Helpful packages
-RUN pacman -S --noconfirm unzip
-
-# Git Setup
-RUN pacman -S --noconfirm git
+# Setup Packages
+RUN pacman -S --noconfirm git unzip
 
 # C Setup
 RUN pacman -S --noconfirm gcc make
@@ -38,18 +35,34 @@ RUN pacman -S --noconfirm rustup rust-analyzer && \
     rustup default stable
 
 # Add extra needed packages
-RUN pacman -S --noconfirm ripgrep
+RUN pacman -S --noconfirm \
+    ripgrep \
+    fzf \
+    tmux \
+    less \
+    extra/ttf-jetbrains-mono-nerd
 
 # Install remaining LS
 RUN source /root/.zshrc && \
     npm i -g bash-language-server
 RUN pacman -S --noconfirm lua-language-server
 
-# Neovim setup
+# Neovim Setup
 RUN pacman -S --noconfirm neovim
 RUN mkdir -p /root/.config/nvim
-COPY ./new_nvim /root/.config/nvim
-RUN nvim --headless "+Lazy! sync" +qa
+COPY ./mini_vim /root/.config/nvim
+
+# Install mini and mini.deps
+ARG MINI_PATH=/root/.local/share/nvim/site/pack/deps/start
+ARG FZF_PATH=/root/.local/share/nvim/site/pack/deps/opt/telescope-fzf-native.nvim
+RUN mkdir -p $MINI_PATH && \
+    pushd $MINI_PATH && \
+    git clone --filter=blob:none https://github.com/echasnovski/mini.nvim && \
+    popd && \
+    nvim --headless +DepsUpdate! +qa && \
+    nvim --headless & sleep 20; kill -INT %+ && \
+    pushd $FZF_PATH && \
+    make
 
 CMD ["/usr/bin/zsh"]
 

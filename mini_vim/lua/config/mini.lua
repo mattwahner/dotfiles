@@ -27,13 +27,16 @@ add({ source = 'neovim/nvim-lspconfig' })
 
 now(function() require('mini.files').setup({
     mappings = {
-        close = "<ESC>"
+        close = "<ESC>",
+        go_in_plus = "<CR>"
     }
 }) end)
 
 now(function() require('mini.icons').setup() end)
 now(function() require('mini.pairs').setup() end)
-now(function() require('mini.git').setup() end)
-now(function() require('mini.diff').setup() end)
 now(function() require('mini.statusline').setup() end)
+
+add({ source = 'NeogitOrg/neogit' })
+add({ source = 'sindrets/diffview.nvim' })
+add({ source = 'lewis6991/gitsigns.nvim' })
 

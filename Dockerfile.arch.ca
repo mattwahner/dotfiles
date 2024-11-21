@@ -1,5 +1,10 @@
 FROM archlinux
 
+ARG CA_FILE
+RUN mkdir -p /home/certs
+COPY $CA_FILE /home/certs/.
+RUN trust anchor --store /home/certs/$CA_FILE
+
 RUN pacman -Sy
 
 # ZSH Setup

@@ -1,6 +1,12 @@
 require('mason').setup()
 require('mason-lspconfig').setup {
-	ensure_installed = { "lua_ls", "rust_analyzer", "eslint" },
+	ensure_installed = {
+        "lua_ls",
+        "rust_analyzer",
+        "eslint",
+        "docker_compose_language_service",
+        "dockerls"
+    },
 }
 
 vim.opt.signcolumn = 'yes'
@@ -27,7 +33,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
 	end,
 })
+
 require('lspconfig').rust_analyzer.setup({})
+require('lspconfig').lua_ls.setup({})
+require('lspconfig').eslint.setup({})
+require('lspconfig').docker_compose_language_service.setup({})
+require('lspconfig').dockerls.setup({})
+
 local cmp = require('cmp')
 
 cmp.setup({

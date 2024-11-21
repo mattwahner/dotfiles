@@ -11,7 +11,7 @@ return require('packer').startup(function(use)
 
 	use({ 'rose-pine/neovim',as = 'rose-pine' })
 	vim.cmd('colorscheme rose-pine')
-	
+
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('nvim-treesitter/playground')
 	use('theprimeagen/harpoon')
@@ -27,5 +27,14 @@ return require('packer').startup(function(use)
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 	}
+
+    use {
+        'folke/lazydev.nvim',
+        ft = "lua",
+        opts = {
+            'lazy.nvim',
+            'LazyVim'
+        }
+    }
 end)
 

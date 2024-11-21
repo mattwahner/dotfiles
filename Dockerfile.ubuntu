@@ -1,0 +1,72 @@
+FROM ubuntu
+
+RUN apt-get update
+
+# ZSH Setup
+RUN apt-get install -y zsh
+COPY .zshrc /root/.
+RUN chsh -s /usr/bin/zsh
+SHELL ["/usr/bin/zsh", "-c"]
+
+# Setup Packages
+RUN apt-get install -y git curl unzip
+
+# C Setup
+RUN apt-get install -y gcc make
+
+# Deno
+RUN curl -fsSL https://deno.land/install.sh | sh
+
+# NVM Setup
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash  && \
+    source /root/.zshrc && \
+    nvm install 20 && \
+    nvm use 20
+
+# Typescript Setup
+RUN source /root/.zshrc && \
+    npm i -g typescript
+
+# Lua Setup
+RUN apt-get install -y lua5.3
+
+# Rust Setup
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y && \
+    source $HOME/.cargo/env && \
+    rustup default stable
+
+# Add extra needed packages
+RUN apt-get install -y \
+    ripgrep \
+    fzf \
+    tmux \
+    less
+
+# Add Homebrew
+RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install remaining LS
+RUN source /root/.zshrc && \
+    npm i -g bash-language-server && \
+    brew install lua-language-server
+
+# Neovim Setup
+RUN source /root/.zshrc && brew install neovim
+RUN mkdir -p /root/.config/nvim
+COPY ./mini_vim /root/.config/nvim
+
+# Install mini and mini.deps
+ARG MINI_PATH=/root/.local/share/nvim/site/pack/deps/start
+ARG FZF_PATH=/root/.local/share/nvim/site/pack/deps/opt/telescope-fzf-native.nvim
+RUN source /root/.zshrc && \
+    mkdir -p $MINI_PATH && \
+    pushd $MINI_PATH && \
+    git clone --filter=blob:none https://github.com/echasnovski/mini.nvim && \
+    popd && \
+    nvim --headless +DepsUpdate! +qa && \
+    nvim --headless & sleep 20; kill -INT %+ && \
+    pushd $FZF_PATH && \
+    make
+
+CMD ["/usr/bin/zsh"]
+

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-selected=$(find $TMUX_PROJECTS -mindepth 1 -maxdepth 1 -type d | fzf)
+selected=$(cat ~/.tmux.projects | xargs -I {} find {} -mindepth 1 -maxdepth 1 -type d | fzf)
 selected_basename=$(basename "$selected")
 tmux_running=$(pgrep tmux)
 

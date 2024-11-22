@@ -1,11 +1,11 @@
 require('mason').setup()
 require('mason-lspconfig').setup {
 	ensure_installed = {
-        "lua_ls",
-        "rust_analyzer",
-        "eslint",
-        "docker_compose_language_service",
-        "dockerls"
+        'lua_ls',
+        'rust_analyzer',
+        'eslint',
+        'ts_ls',
+        'bashls',
     },
 }
 
@@ -36,20 +36,25 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 require('lspconfig').rust_analyzer.setup({})
 require('lspconfig').lua_ls.setup({})
-require('lspconfig').eslint.setup({})
-require('lspconfig').docker_compose_language_service.setup({})
-require('lspconfig').dockerls.setup({})
+require('lspconfig').denols.setup({})
+require('lspconfig').bashls.setup({})
 
 local cmp = require('cmp')
-
 cmp.setup({
-	sources = {
-		{name = 'nvim_lsp'},
-	},
-	snippet = {
-		expand = function(args)
-			vim.snippet.expand(args.body)
-		end,
-	},
-	mapping = cmp.mapping.preset.insert({}),
+    sources = {
+        {name = 'nvim_lsp'},
+    },
+    mapping = cmp.mapping.preset.insert({
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-d>'] = cmp.mapping.scroll_docs(4),
+        ['<C-e>'] = cmp.mapping.abort(),
+        ['<CR>'] = cmp.mapping.confirm({ select = true })
+    }),
+    snippet = {
+        expand = function(args)
+            vim.snippet.expand(args.body)
+        end,
+    },
 })
+

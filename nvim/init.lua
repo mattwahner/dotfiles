@@ -1,2 +1,2 @@
-require("matt")
+require('config.init')
 

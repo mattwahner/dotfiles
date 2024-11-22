@@ -6,6 +6,9 @@ alias vi="nvim"
 alias vim="nvim ."
 
 # Utility commands
-alias ll="ll -al"
+alias ..="cd .."
+alias ll="ls -al"
+alias la="ls -a"
 
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+bindkey -s ^f "bash ~/.local/scripts/tmux-sessionizer.bash\n"
+

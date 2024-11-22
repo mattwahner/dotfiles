@@ -57,3 +57,15 @@ rustup default stable
 Make sure to make a `.tmux.projects` file in the home directory.
 `tmux-sessionizer.bash` will use this to figure out which directories it should display to be picked.
 
+### Symlinks
+
+Here is an example of a symbolic link I can run to connect directories to this repo, wherever I clone it.  
+`ln -s <path to item in repo> <name of link>`
+
+Things that I should probably symlink:
+- nvim -> ~/.config/nvim
+- .tmux.conf
+- .zprofile (can name it .zprofile.dotfiles and source it from .zprofile)
+- .zshrc (^)
+- scripts -> ~/.local/scripts
+

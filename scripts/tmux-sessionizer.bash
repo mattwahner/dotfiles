@@ -9,12 +9,12 @@ if [[ -z $selected ]]; then
 fi
 
 if [[ -z $tmux_running ]]; then
-    tmux new-session -n vim -s "$selected_basename" -c "$selected" nvim .
+    tmux new-session -n vim -s "$selected_basename" -c "$selected" nvim
     exit 0
 fi
 
 if [[ -z $(tmux has-session -t "$selected_basename" 2> /dev/null) ]]; then
-    tmux new-session -d -n vim -s "$selected_basename" -c "$selected" nvim .
+    tmux new-session -d -n vim -s "$selected_basename" -c "$selected" nvim
 fi
 
 if [[ $TMUX ]]; then

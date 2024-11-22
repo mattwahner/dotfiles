@@ -2,6 +2,15 @@
 
 ## Setup
 
+### Terminal Items
+
+Likely can use the terminal colors settings in the `extras` folder
+[here](https://github.com/folke/tokyonight.nvim/tree/main/extras).
+
+Currently like using the
+[JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
+(which also enables powerline stuff).
+
 ### List of required programs (that I can remember)
 
 #### [NVM](https://github.com/nvm-sh/nvm)

@@ -5,10 +5,12 @@
 #### List of required programs (that I can remember)
 
 - [NVM](https://github.com/nvm-sh/nvm)
-  - `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash`
-  - `nvm install 22`
-  - `nvm use 22`
-  - `nvm alias default 22`
+  ```
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+  nvm install 22
+  nvm use 22
+  nvm alias default 22
+  ```
 - Homebrew
   - [neovim](https://formulae.brew.sh/formula/neovim)
     - `brew install neovim`

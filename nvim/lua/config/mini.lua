@@ -52,3 +52,7 @@ add({ source = 'NeogitOrg/neogit' })
 add({ source = 'sindrets/diffview.nvim' })
 add({ source = 'lewis6991/gitsigns.nvim' })
 
+add({ source = 'MunifTanjim/nui.nvim' })
+add({ source = 'folke/trouble.nvim' })
+add({ source = 'jackMort/ChatGPT.nvim' })
+

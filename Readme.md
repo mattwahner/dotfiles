@@ -71,6 +71,8 @@ rustup default stable
 Make sure to make a `.tmux.projects` file in the home directory.
 `tmux-sessionizer.bash` will use this to figure out which directories it should display to be picked.
 
+The file `.zprofile.example` will hold an example of the `.zprofile` file with added necessary vars in it.
+
 ### Symlinks
 
 Here is an example of a symbolic link I can run to connect directories to this repo, wherever I clone it.  
@@ -84,4 +86,9 @@ Things that I should probably symlink:
 - .tmux.conf
 - .zprofile (can name it .zprofile.dotfiles and source it from .zprofile)
 - .zshrc (^)
+
+### Other Helpful Programs
+
+[tlrc](https://github.com/tldr-pages/tlrc) - Helpful TLDR pages  
+`brew install tlrc`
 

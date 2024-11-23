@@ -1,0 +1,7 @@
+
+# Dont forget to source your dotfile .zprofile
+# ex, ln -s <dotfiles repo>/.zprofile ~/.zprofile.dotfile
+# ex, source ~/.zprofile.dotfile
+
+export OPENAI_API_KEY=
+

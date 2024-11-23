@@ -43,7 +43,7 @@ nvm alias default 22
 [powerline-shell](https://github.com/b-ryan/powerline-shell)  
 `pipx install powerline-shell`
 
-[eza](https://github.com/eza-community/eza)
+[eza](https://github.com/eza-community/eza)  
 `brew install eza`
 
 #### Language Servers
@@ -63,7 +63,7 @@ rustup default stable
 [bashls](https://github.com/bash-lsp/bash-language-server)  
 `npm i -g bash-language-server`
 
-[pyright](https://github.com/microsoft/pyright)
+[pyright](https://github.com/microsoft/pyright)  
 `npm i -g pyright`
 
 ### Files
@@ -80,8 +80,8 @@ Here is an example of a symbolic link I can run to connect directories to this r
 
 Things that I should probably symlink:
 - nvim -> ~/.config/nvim
+- powerline-shell -> ~/.config/powerline-shell
 - scripts -> ~/.local/scripts
-- powerline-shell -> ~/.local/powerline-shell
 - eza -> ~/.local/eza
 - .tmux.conf
 - .zprofile (can name it .zprofile.dotfiles and source it from .zprofile)

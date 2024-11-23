@@ -7,10 +7,12 @@ alias vim="nvim ."
 
 # Utility commands
 alias ..="cd .."
-alias ll="ls -al"
-alias la="ls -a"
+alias ll="eza --color=always --long --git --icons --no-time --no-user --no-permissions --all --no-filesize --sort=type"
+alias lls="eza --color=always --long --git --icons --no-time --no-user --no-permissions --all --total-size --sort=type"
 
 bindkey -s ^f "bash ~/.local/scripts/tmux-sessionizer.bash\n"
+
+eval "$(fzf --zsh)"
 
 # Powerline
 

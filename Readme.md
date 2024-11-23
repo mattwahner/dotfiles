@@ -7,6 +7,10 @@
 Likely can use the terminal colors settings in the `extras` folder
 [here](https://github.com/folke/tokyonight.nvim/tree/main/extras).
 
+For settting Windows Terminal, find the corresponding json in the `extras` folder above, and
+enter it under "schemas" list in
+`{USERNAME}\AppDate\Local\Packages\Microsoft.WindowsTerminal(...)\LocalState\settings.json`.
+
 Currently like using the
 [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
 (which also enables powerline stuff).
@@ -38,6 +42,9 @@ nvm alias default 22
 
 [powerline-shell](https://github.com/b-ryan/powerline-shell)  
 `pipx install powerline-shell`
+
+[eza](https://github.com/eza-community/eza)
+`brew install eza`
 
 #### Language Servers
 
@@ -71,9 +78,10 @@ Here is an example of a symbolic link I can run to connect directories to this r
 
 Things that I should probably symlink:
 - nvim -> ~/.config/nvim
+- scripts -> ~/.local/scripts
+- powerline-shell -> ~/.local/powerline-shell
+- eza -> ~/.local/eza
 - .tmux.conf
 - .zprofile (can name it .zprofile.dotfiles and source it from .zprofile)
 - .zshrc (^)
-- scripts -> ~/.local/scripts
-- powerline-shell -> ~/.local/powerline-shell
 

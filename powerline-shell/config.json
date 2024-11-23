@@ -2,8 +2,7 @@
   "segments": [
     "virtual_env",
     "username",
-    "ssh",
-    "cwd",
-    "root"
-  ]
+    "cwd"
+  ],
+  "theme": "~/.config/powerline-shell/theme.py"
 }

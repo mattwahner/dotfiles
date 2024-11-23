@@ -80,8 +80,8 @@ Here is an example of a symbolic link I can run to connect directories to this r
 
 Things that I should probably symlink:
 - nvim -> ~/.config/nvim
+- powerline-shell -> ~/.config/powerline-shell
 - scripts -> ~/.local/scripts
-- powerline-shell -> ~/.local/powerline-shell
 - eza -> ~/.local/eza
 - .tmux.conf
 - .zprofile (can name it .zprofile.dotfiles and source it from .zprofile)

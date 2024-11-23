@@ -56,3 +56,5 @@ add({ source = 'MunifTanjim/nui.nvim' })
 add({ source = 'folke/trouble.nvim' })
 add({ source = 'jackMort/ChatGPT.nvim' })
 
+add({ source = 'github/copilot.vim' })
+

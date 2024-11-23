@@ -35,12 +35,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
-require('lspconfig').lua_ls.setup{}
-require('lspconfig').rust_analyzer.setup{}
-require('lspconfig').ts_ls.setup{}
-require('lspconfig').bashls.setup{}
-require('lspconfig').pyright.setup{}
-require('lspconfig').marksman.setup{}
+require('lspconfig').lua_ls.setup({})
+require('lspconfig').rust_analyzer.setup({})
+require('lspconfig').ts_ls.setup({})
+require('lspconfig').bashls.setup({})
+require('lspconfig').pyright.setup({})
+require('lspconfig').marksman.setup({})
 
 local cmp = require('cmp')
 cmp.setup({

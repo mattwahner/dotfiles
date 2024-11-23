@@ -43,7 +43,7 @@ nvm alias default 22
 [powerline-shell](https://github.com/b-ryan/powerline-shell)  
 `pipx install powerline-shell`
 
-[eza](https://github.com/eza-community/eza)
+[eza](https://github.com/eza-community/eza)  
 `brew install eza`
 
 #### Language Servers

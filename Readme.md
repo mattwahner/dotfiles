@@ -57,14 +57,14 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup default stable
 ```
 
-[ESLint](https://github.com/hrsh7th/vscode-langservers-extracted)  
-`npm i -g vscode-langservers-extracted`
-
 [ts_ls](https://github.com/typescript-language-server/typescript-language-server)  
 `npm i -g typescript typescript-language-server`
 
 [bashls](https://github.com/bash-lsp/bash-language-server)  
 `npm i -g bash-language-server`
+
+[pyright](https://github.com/microsoft/pyright)
+`npm i -g pyright`
 
 ### Files
 

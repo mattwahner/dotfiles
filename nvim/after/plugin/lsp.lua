@@ -3,9 +3,9 @@ require('mason-lspconfig').setup {
 	ensure_installed = {
         'lua_ls',
         'rust_analyzer',
-        'eslint',
         'ts_ls',
         'bashls',
+        'pyright'
     },
 }
 
@@ -34,10 +34,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
-require('lspconfig').rust_analyzer.setup({})
-require('lspconfig').lua_ls.setup({})
-require('lspconfig').denols.setup({})
-require('lspconfig').bashls.setup({})
+require('lspconfig').lua_ls.setup{}
+require('lspconfig').rust_analyzer.setup{}
+require('lspconfig').ts_ls.setup{}
+require('lspconfig').bashls.setup{}
+require('lspconfig').pyright.setup{}
 
 local cmp = require('cmp')
 cmp.setup({

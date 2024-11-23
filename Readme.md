@@ -63,7 +63,7 @@ rustup default stable
 [bashls](https://github.com/bash-lsp/bash-language-server)  
 `npm i -g bash-language-server`
 
-[pyright](https://github.com/microsoft/pyright)
+[pyright](https://github.com/microsoft/pyright)  
 `npm i -g pyright`
 
 ### Files

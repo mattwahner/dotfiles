@@ -42,10 +42,17 @@ require('lspconfig').bashls.setup({})
 require('lspconfig').pyright.setup({})
 require('lspconfig').marksman.setup({})
 
+require('copilot').setup({
+    suggestion = { enabled = false },
+    panel = { enabled = false },
+})
+require('copilot_cmp').setup({})
+
 local cmp = require('cmp')
 cmp.setup({
     sources = {
-        {name = 'nvim_lsp'},
+        { name = 'nvim_lsp' },
+        { name = 'copilot' }
     },
     mapping = cmp.mapping.preset.insert({
         ['<C-Space>'] = cmp.mapping.complete(),

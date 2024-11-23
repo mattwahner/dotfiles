@@ -13,7 +13,7 @@ Currently like using the
 
 ### List of required programs (that I can remember)
 
-#### [NVM](https://github.com/nvm-sh/nvm)
+[NVM](https://github.com/nvm-sh/nvm)  
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 nvm install 22
@@ -21,13 +21,13 @@ nvm use 22
 nvm alias default 22
 ```
 
-#### [Homebrew](https://brew.sh/)
+[Homebrew](https://brew.sh/)  
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-#### [neovim](https://formulae.brew.sh/formula/neovim)
+[neovim](https://formulae.brew.sh/formula/neovim)  
 `brew install neovim`
 
-#### [tmux](https://formulae.brew.sh/formula/tmux)
+[tmux](https://formulae.brew.sh/formula/tmux)  
 `brew install tmux`
 
 #### [fzf](https://formulae.brew.sh/formula/fzf)

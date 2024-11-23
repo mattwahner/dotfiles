@@ -5,7 +5,8 @@ require('mason-lspconfig').setup {
         'rust_analyzer',
         'ts_ls',
         'bashls',
-        'pyright'
+        'pyright',
+        'marksman'
     },
 }
 
@@ -39,6 +40,7 @@ require('lspconfig').rust_analyzer.setup{}
 require('lspconfig').ts_ls.setup{}
 require('lspconfig').bashls.setup{}
 require('lspconfig').pyright.setup{}
+require('lspconfig').marksman.setup{}
 
 local cmp = require('cmp')
 cmp.setup({

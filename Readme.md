@@ -33,6 +33,12 @@ nvm alias default 22
 [fzf](https://formulae.brew.sh/formula/fzf)  
 `brew install fzf`
 
+[pipx](https://github.com/pypa/pipx)  
+`brew install pipx`
+
+[powerline-shell](https://github.com/b-ryan/powerline-shell)  
+`pipx install powerline-shell`
+
 #### Language Servers
 
 [Lua Language Server](https://formulae.brew.sh/formula/lua-language-server)  
@@ -69,4 +75,5 @@ Things that I should probably symlink:
 - .zprofile (can name it .zprofile.dotfiles and source it from .zprofile)
 - .zshrc (^)
 - scripts -> ~/.local/scripts
+- powerline-shell -> ~/.local/powerline-shell
 

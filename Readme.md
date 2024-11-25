@@ -66,6 +66,12 @@ rustup default stable
 [pyright](https://github.com/microsoft/pyright)  
 `npm i -g pyright`
 
+[codelldb](https://github.com/vadimcn/codelldb)  
+Inside Neovim: `:MasonInstall codelldb`
+
+[js-debug-adapter](https://github.com/microsoft/vscode-js-debug)  
+Inside Neovim: `:MasonInstall js-debug-adapter`
+
 ### Files
 
 Make sure to make a `.tmux.projects` file in the home directory.

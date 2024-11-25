@@ -56,6 +56,14 @@ add({ source = 'MunifTanjim/nui.nvim' })
 add({ source = 'folke/trouble.nvim' })
 add({ source = 'jackMort/ChatGPT.nvim' })
 
-add({ source = 'zbirenbaum/copilot.lua' })
-add({ source = 'zbirenbaum/copilot-cmp' })
+add({ source = 'github/copilot.vim' })
+
+add({ source = 'antoinemadec/FixCursorHold.nvim' })
+add({ source = 'nvim-neotest/nvim-nio' })
+add({ source = 'nvim-neotest/neotest' })
+add({ source = 'mrcjkb/rustaceanvim' })
+
+add({ source = 'mfussenegger/nvim-dap' })
+add({ source = 'rcarriga/nvim-dap-ui' })
+add({ source = 'theHamsta/nvim-dap-virtual-text' })
 

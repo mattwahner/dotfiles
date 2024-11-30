@@ -72,6 +72,9 @@ Inside Neovim: `:MasonInstall codelldb`
 [js-debug-adapter](https://github.com/microsoft/vscode-js-debug)  
 Inside Neovim: `:MasonInstall js-debug-adapter`
 
+[terraform-ls](https://github.com/hashicorp/terraform-ls)  
+`brew install terraform terraform-ls`
+
 ### Files
 
 Make sure to make a `.tmux.projects` file in the home directory.

@@ -6,7 +6,8 @@ require('mason-lspconfig').setup {
         'ts_ls',
         'bashls',
         'pyright',
-        'marksman'
+        'marksman',
+        'terraformls'
     },
 }
 
@@ -29,9 +30,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
 		vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
 		vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
+		vim.keymap.set('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
 		vim.keymap.set('n', '<leader>lr', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
 		vim.keymap.set({'n', 'x'}, '<leader>lf', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
-		vim.keymap.set('n', '<leader>la', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
 	end,
 })
 
@@ -40,6 +41,7 @@ require('lspconfig').ts_ls.setup({})
 require('lspconfig').bashls.setup({})
 require('lspconfig').pyright.setup({})
 require('lspconfig').marksman.setup({})
+require('lspconfig').terraformls.setup({})
 
 local cmp = require('cmp')
 cmp.setup({

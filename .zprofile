@@ -2,6 +2,7 @@
 export PATH="$HOME/.local/scripts:${PATH}"
 export PATH="$HOME/.local/bin:${PATH}"
 export PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
+export PATH="/usr/local/go/bin:${PATH}"
 
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \

@@ -75,6 +75,15 @@ Inside Neovim: `:MasonInstall js-debug-adapter`
 [terraform-ls](https://github.com/hashicorp/terraform-ls)  
 `brew install terraform terraform-ls`
 
+[go](https://go.dev/doc/install)  
+[gopls](https://github.com/golang/tools/tree/master/gopls)  
+Get latest runnable command from link above.  
+```
+curl -OL https://go.dev/dl/go1.23.3.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.23.3.linux-amd64.tar.gz
+go install golang.org/x/tools/gopls@latest
+```
+
 ### Files
 
 Make sure to make a `.tmux.projects` file in the home directory.

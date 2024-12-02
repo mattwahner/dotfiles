@@ -7,7 +7,8 @@ require('mason-lspconfig').setup {
         'bashls',
         'pyright',
         'marksman',
-        'terraformls'
+        'terraformls',
+        'gopls'
     },
 }
 
@@ -43,6 +44,7 @@ require('lspconfig').bashls.setup({})
 require('lspconfig').pyright.setup({})
 require('lspconfig').marksman.setup({})
 require('lspconfig').terraformls.setup({})
+require('lspconfig').gopls.setup({})
 
 local cmp = require('cmp')
 cmp.setup({

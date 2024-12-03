@@ -40,7 +40,9 @@ add({ source = 'neovim/nvim-lspconfig' })
 now(function() require('mini.files').setup({
     mappings = {
         close = "<ESC>",
-        go_in_plus = "<CR>"
+        go_in_plus = "<CR>",
+        go_in = ";",
+        go_out = "j"
     }
 }) end)
 
@@ -54,9 +56,11 @@ add({ source = 'lewis6991/gitsigns.nvim' })
 
 add({ source = 'MunifTanjim/nui.nvim' })
 add({ source = 'folke/trouble.nvim' })
-add({ source = 'jackMort/ChatGPT.nvim' })
 
--- add({ source = 'github/copilot.vim' })
+if os.getenv('NVIM_ENABLE_AI') ~= nil then
+    add({ source = 'jackMort/ChatGPT.nvim' })
+    -- add({ source = 'github/copilot.vim' })
+end
 
 add({ source = 'antoinemadec/FixCursorHold.nvim' })
 add({ source = 'nvim-neotest/nvim-nio' })

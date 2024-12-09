@@ -17,6 +17,7 @@ neogit.setup({
             ["l"] = "MoveUp"
         },
         popup = {
+            ["l"] = false,
             [";"] = "LogPopup"
         }
     }

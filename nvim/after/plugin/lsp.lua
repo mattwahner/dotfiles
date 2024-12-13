@@ -12,6 +12,8 @@ require('mason-lspconfig').setup {
     },
 }
 
+vim.keymap.set('n', '<leader>ls', '<cmd>lua vim.lsp.stop_client(vim.lsp.get_clients())<cr>')
+
 vim.opt.signcolumn = 'yes'
 local lspconfig_defaults = require('lspconfig').util.default_config
 lspconfig_defaults.capabilities = vim.tbl_deep_extend(

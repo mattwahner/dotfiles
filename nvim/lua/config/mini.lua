@@ -28,6 +28,7 @@ add({
 add({ source = 'nvim-telescope/telescope-fzf-native.nvim' })
 
 add({ source = 'nvim-treesitter/nvim-treesitter' })
+add({ source = 'aaronik/treewalker.nvim' })
 
 add({ source = 'theprimeagen/harpoon' })
 

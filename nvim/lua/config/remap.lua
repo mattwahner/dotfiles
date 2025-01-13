@@ -3,11 +3,11 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Use jkl; to move
-vim.keymap.set({"n", "v"}, "-", ";", { noremap = true })
-vim.keymap.set({"n", "v"}, ";", "l", { noremap = true })
-vim.keymap.set({"n", "v"}, "l", "k", { noremap = true })
-vim.keymap.set({"n", "v"}, "k", "j", { noremap = true })
-vim.keymap.set({"n", "v"}, "j", "h", { noremap = true })
+-- vim.keymap.set({"n", "v"}, "-", ";", { noremap = true })
+-- vim.keymap.set({"n", "v"}, ";", "l", { noremap = true })
+-- vim.keymap.set({"n", "v"}, "l", "k", { noremap = true })
+-- vim.keymap.set({"n", "v"}, "k", "j", { noremap = true })
+-- vim.keymap.set({"n", "v"}, "j", "h", { noremap = true })
 
 -- Use to move highlighted text up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

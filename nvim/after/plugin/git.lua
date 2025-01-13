@@ -12,13 +12,13 @@ neogit.setup({
             ["<esc>"] = "Close"
         },
         status = {
-            ["<esc>"] = "Close",
-            ["k"] = "MoveDown",
-            ["l"] = "MoveUp"
+            ["<esc>"] = "Close"
+            -- ["k"] = "MoveDown",
+            -- ["l"] = "MoveUp"
         },
         popup = {
-            ["l"] = false,
-            [";"] = "LogPopup"
+            ["l"] = false
+            -- [";"] = "LogPopup"
         }
     }
 })

@@ -42,8 +42,8 @@ now(function() require('mini.files').setup({
     mappings = {
         close = "<ESC>",
         go_in_plus = "<CR>",
-        go_in = ";",
-        go_out = "j"
+        -- go_in = ";",
+        -- go_out = "j"
     }
 }) end)
 

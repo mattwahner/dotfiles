@@ -40,8 +40,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
+require('lspconfig').ts_ls.setup({
+    init_options = {
+        preferences = {
+            importModuleSpecifierPreference = 'relative',
+            importModuleSpecifierEnding = 'minimal'
+        }
+    }
+})
+
 require('lspconfig').lua_ls.setup({})
-require('lspconfig').ts_ls.setup({})
 require('lspconfig').bashls.setup({})
 require('lspconfig').pyright.setup({})
 require('lspconfig').marksman.setup({})

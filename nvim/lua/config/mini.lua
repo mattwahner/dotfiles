@@ -30,8 +30,6 @@ add({ source = 'nvim-telescope/telescope-fzf-native.nvim' })
 add({ source = 'nvim-treesitter/nvim-treesitter' })
 add({ source = 'aaronik/treewalker.nvim' })
 
-add({ source = 'theprimeagen/harpoon' })
-
 add({ source = 'williamboman/mason.nvim' })
 add({ source = 'williamboman/mason-lspconfig.nvim' })
 add({ source = 'hrsh7th/nvim-cmp' })

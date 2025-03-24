@@ -1,6 +1,7 @@
 
 require('config.set')
 require('config.remap')
+require('config.links')
 
 -- Do not load netrw
 vim.g.loaded_netrw = 1

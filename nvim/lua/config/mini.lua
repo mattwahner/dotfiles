@@ -42,8 +42,9 @@ now(function() require('mini.files').setup({
     mappings = {
         close = "<ESC>",
         go_in_plus = "<CR>",
-        -- go_in = ";",
-        -- go_out = "j"
+    },
+    windows = {
+        width_nofocus = 30,
     }
 }) end)
 

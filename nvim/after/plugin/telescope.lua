@@ -26,4 +26,6 @@ vim.keymap.set('n', '<leader>ft', builtin.lsp_type_definitions, { desc = 'Find T
 vim.keymap.set('n', '<leader>fr', builtin.lsp_references, { desc = 'Find References' })
 vim.keymap.set('n', '<leader>fs', builtin.lsp_document_symbols, { desc = 'Find Document Symbols' })
 vim.keymap.set('n', '<leader>fw', builtin.lsp_dynamic_workspace_symbols, { desc = 'Find Workspace Symbols' })
+vim.keymap.set('n', '<leader>fe', function() builtin.diagnostics({ bufnr = 0 }) end, { desc = 'Find Workspace Symbols' })
+vim.keymap.set('n', '<leader>fE', function() builtin.diagnostics({ bufnr = nil }) end, { desc = 'Find Workspace Symbols' })
 

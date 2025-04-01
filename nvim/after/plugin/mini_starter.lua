@@ -1,5 +1,5 @@
 
-require('mini.starter').setup({
-    header = 'NEOVIM'
-})
+-- require('mini.starter').setup({
+--     header = 'NEOVIM'
+-- })
 

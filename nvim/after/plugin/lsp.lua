@@ -53,7 +53,12 @@ require('lspconfig').lua_ls.setup({})
 require('lspconfig').bashls.setup({})
 require('lspconfig').pyright.setup({})
 require('lspconfig').marksman.setup({})
-require('lspconfig').terraformls.setup({})
+require('lspconfig').terraformls.setup({
+    init_options = {
+        cmd = { "terraform-ls", "serve" },
+        filetypes = { "terraform", "terraform-vars" }
+    }
+})
 require('lspconfig').gopls.setup({})
 
 local cmp = require('cmp')

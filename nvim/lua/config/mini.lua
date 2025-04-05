@@ -53,6 +53,8 @@ now(function() require('mini.statusline').setup() end)
 add({ source = 'NeogitOrg/neogit' })
 add({ source = 'sindrets/diffview.nvim' })
 add({ source = 'lewis6991/gitsigns.nvim' })
+add({ source = 'nvim-tree/nvim-web-devicons' })
+add({ source = 'pwntester/octo.nvim' })
 
 add({ source = 'MunifTanjim/nui.nvim' })
 add({ source = 'folke/trouble.nvim' })

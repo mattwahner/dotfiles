@@ -60,6 +60,9 @@ rustup default stable
 [ts_ls](https://github.com/typescript-language-server/typescript-language-server)  
 `npm i -g typescript typescript-language-server`
 
+[tailwindcss](https://github.com/tailwindlabs/tailwindcss-intellisense)  
+`npm i -g @tailwindcss/language-server`
+
 [bashls](https://github.com/bash-lsp/bash-language-server)  
 `npm i -g bash-language-server`
 
@@ -83,6 +86,9 @@ curl -OL https://go.dev/dl/go1.23.3.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.23.3.linux-amd64.tar.gz
 go install golang.org/x/tools/gopls@latest
 ```
+
+[c++](https://clangd.llvm.org/)  
+`brew install llvm`
 
 ### Files
 

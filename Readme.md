@@ -17,14 +17,6 @@ Currently like using the
 
 ### List of required programs (that I can remember)
 
-[NVM](https://github.com/nvm-sh/nvm)  
-```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-nvm install 22
-nvm use 22
-nvm alias default 22
-```
-
 [Homebrew](https://brew.sh/)  
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
@@ -32,6 +24,20 @@ At this point, consider installing build-essential and gcc if on Ubuntu / Linux.
 ```
 sudo apt-get install build-essential
 brew install gcc
+```
+
+Install ZSH and set it as your default shell.
+```
+brew install zsh
+chsh -s $(which zsh)
+```
+
+[NVM](https://github.com/nvm-sh/nvm)  
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+nvm install 22
+nvm use 22
+nvm alias default 22
 ```
 
 [neovim](https://formulae.brew.sh/formula/neovim)  

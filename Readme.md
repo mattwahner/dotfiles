@@ -22,6 +22,7 @@ Install ZSH and set it as your default shell if using Ubuntu.
 brew install zsh
 chsh -s $(which zsh)
 ```
+Make sure to restart the shell before running the homebrew install.
 
 [Homebrew](https://brew.sh/)  
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`

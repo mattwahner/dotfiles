@@ -28,9 +28,9 @@ nvm alias default 22
 [Homebrew](https://brew.sh/)  
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-At this point, consider install build-essentials and gcc if on Ubuntu / Linux.  
+At this point, consider installing build-essential and gcc if on Ubuntu / Linux.  
 ```
-sudo apt-get install build-essentials
+sudo apt-get install build-essential
 brew install gcc
 ```
 

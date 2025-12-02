@@ -17,12 +17,7 @@ require('mason-lspconfig').setup {
 vim.keymap.set('n', '<leader>ls', '<cmd>lua vim.lsp.stop_client(vim.lsp.get_clients())<cr>')
 
 vim.opt.signcolumn = 'yes'
-local lspconfig_defaults = require('lspconfig').util.default_config
-lspconfig_defaults.capabilities = vim.tbl_deep_extend(
-	'force',
-	lspconfig_defaults.capabilities,
-	require('cmp_nvim_lsp').default_capabilities()
-)
+
 vim.api.nvim_create_autocmd('LspAttach', {
 	desc = 'LSP actions',
 	callback = function(event)
@@ -42,7 +37,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
-require('lspconfig').ts_ls.setup({
+vim.lsp.config('ts_ls', {
     init_options = {
         preferences = {
             importModuleSpecifierPreference = 'relative',
@@ -50,20 +45,19 @@ require('lspconfig').ts_ls.setup({
         }
     }
 })
-
-require('lspconfig').lua_ls.setup({})
-require('lspconfig').bashls.setup({})
-require('lspconfig').pyright.setup({})
-require('lspconfig').marksman.setup({})
-require('lspconfig').terraformls.setup({
+vim.lsp.config('lua_ls', {})
+vim.lsp.config('bashls', {})
+vim.lsp.config('pyright', {})
+vim.lsp.config('marksman', {})
+vim.lsp.config('terraformls', {
     init_options = {
         cmd = { "terraform-ls", "serve" },
         filetypes = { "terraform", "terraform-vars" }
     }
 })
-require('lspconfig').gopls.setup({})
-require('lspconfig').tailwindcss.setup({})
-require('lspconfig').clangd.setup({})
+vim.lsp.config('gopls', {})
+vim.lsp.config('tailwindcss', {})
+vim.lsp.config('clangd', {})
 
 local cmp = require('cmp')
 cmp.setup({

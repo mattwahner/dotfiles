@@ -28,6 +28,12 @@ nvm alias default 22
 [Homebrew](https://brew.sh/)  
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
+At this point, consider install build-essentials and gcc if on Ubuntu / Linux.  
+```
+sudo apt-get install build-essentials
+brew install gcc
+```
+
 [neovim](https://formulae.brew.sh/formula/neovim)  
 `brew install neovim`
 

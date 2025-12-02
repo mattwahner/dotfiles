@@ -17,6 +17,12 @@ Currently like using the
 
 ### List of required programs (that I can remember)
 
+Install ZSH and set it as your default shell if using Ubuntu.
+```
+brew install zsh
+chsh -s $(which zsh)
+```
+
 [Homebrew](https://brew.sh/)  
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
@@ -24,12 +30,6 @@ At this point, consider installing build-essential and gcc if on Ubuntu / Linux.
 ```
 sudo apt-get install build-essential
 brew install gcc
-```
-
-Install ZSH and set it as your default shell.
-```
-brew install zsh
-chsh -s $(which zsh)
 ```
 
 [NVM](https://github.com/nvm-sh/nvm)  

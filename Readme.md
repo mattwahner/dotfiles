@@ -19,7 +19,7 @@ Currently like using the
 
 Install ZSH and set it as your default shell if using Ubuntu.
 ```
-brew install zsh
+sudo apt-get install zsh
 chsh -s $(which zsh)
 ```
 Make sure to restart the shell before running the homebrew install.

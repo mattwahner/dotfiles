@@ -1,5 +1,5 @@
 
-require('config.set')
+require('config.change')
 require('config.remap')
 require('config.links')
 

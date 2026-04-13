@@ -10,6 +10,8 @@ return {
 		sources = {
 			providers = {
 				buffer = { enabled = false },
+				snippets = { enabled = false },
+				copilot = { enabled = false },
 			},
 		},
 	},

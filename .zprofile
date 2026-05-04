@@ -1,6 +1,7 @@
 
 export PATH="$HOME/.local/scripts:${PATH}"
 export PATH="$HOME/.local/bin:${PATH}"
+export PATH="$HOME/go/bin:${PATH}"
 export PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
 export PATH="/usr/local/go/bin:${PATH}"
 

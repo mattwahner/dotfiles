@@ -1,0 +1,61 @@
+{
+  "lspServers": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "fileExtensions": {
+        ".tf": "terraform",
+        ".tfvars": "terraform-vars"
+      }
+    },
+    "python": {
+      "command": "pyright-langserver",
+      "args": ["--stdio"],
+      "fileExtensions": {
+        ".py": "python",
+        ".pyi": "python"
+      }
+    },
+    "cpp": {
+      "command": "clangd",
+      "args": [],
+      "fileExtensions": {
+        ".c": "c",
+        ".h": "c",
+        ".cpp": "cpp",
+        ".cxx": "cpp",
+        ".cc": "cpp",
+        ".hpp": "cpp",
+        ".hxx": "cpp"
+      }
+    },
+    "rust": {
+      "command": "rust-analyzer",
+      "args": [],
+      "fileExtensions": {
+        ".rs": "rust"
+      }
+    },
+    "go": {
+      "command": "gopls",
+      "args": [],
+      "fileExtensions": {
+        ".go": "go"
+      }
+    },
+    "typescript": {
+      "command": "typescript-language-server",
+      "args": ["--stdio"],
+      "fileExtensions": {
+        ".ts": "typescript",
+        ".tsx": "typescriptreact",
+        ".js": "javascript",
+        ".jsx": "javascriptreact",
+        ".mjs": "javascript",
+        ".cjs": "javascript",
+        ".mts": "typescript",
+        ".cts": "typescript"
+      }
+    }
+  }
+}

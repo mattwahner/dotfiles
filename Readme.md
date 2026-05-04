@@ -18,22 +18,26 @@ Currently like using the
 ### List of required programs (that I can remember)
 
 Install ZSH and set it as your default shell if using Ubuntu.
+
 ```
 sudo apt-get install zsh
 chsh -s $(which zsh)
 ```
+
 Make sure to restart the shell before running the homebrew install.
 
 [Homebrew](https://brew.sh/)  
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 At this point, consider installing build-essential and gcc if on Ubuntu / Linux.  
+
 ```
 sudo apt-get install build-essential
 brew install gcc
 ```
 
 [NVM](https://github.com/nvm-sh/nvm)  
+
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 nvm install 22
@@ -65,6 +69,7 @@ nvm alias default 22
 `brew install lua-language-server`
 
 Rust Analyzer  
+
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup default stable
@@ -94,6 +99,7 @@ Inside Neovim: `:MasonInstall js-debug-adapter`
 [go](https://go.dev/doc/install)  
 [gopls](https://github.com/golang/tools/tree/master/gopls)  
 Get latest runnable command from link above.  
+
 ```
 curl -OL https://go.dev/dl/go1.23.3.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.23.3.linux-amd64.tar.gz
@@ -102,6 +108,11 @@ go install golang.org/x/tools/gopls@latest
 
 [c++](https://clangd.llvm.org/)  
 `brew install llvm`
+
+### AI
+
+Alas... AI is finally being pushed dramatically, so I should add it in.
+`brew install copilot-cli`
 
 ### Files
 
@@ -116,10 +127,12 @@ Here is an example of a symbolic link I can run to connect directories to this r
 `ln -s <path to item in repo> <name of link>`
 
 Things that I should probably symlink:
+
 - nvim -> ~/.config/nvim
 - powerline-shell -> ~/.config/powerline-shell
 - scripts -> ~/.local/scripts
 - eza -> ~/.local/eza
+- lsp-config.json -> ~/.copilot/lsp-config.json
 - .tmux.conf
 - .zprofile (can name it .zprofile.dotfiles and source it from .zprofile)
 - .zshrc (^)
@@ -128,4 +141,3 @@ Things that I should probably symlink:
 
 [tlrc](https://github.com/tldr-pages/tlrc) - Helpful TLDR pages  
 `brew install tlrc`
-

@@ -109,6 +109,9 @@ go install golang.org/x/tools/gopls@latest
 [c++](https://clangd.llvm.org/)  
 `brew install llvm`
 
+[jdtls](https://github.com/eclipse-jdtls/eclipse.jdt.ls)
+`brew install jdtls`
+
 ### AI
 
 Alas... AI is finally being pushed dramatically, so I should add it in.

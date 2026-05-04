@@ -43,6 +43,13 @@
         ".go": "go"
       }
     },
+    "java": {
+      "command": "jdtls",
+      "args": [],
+      "fileExtensions": {
+        ".java": "java"
+      }
+    },
     "typescript": {
       "command": "typescript-language-server",
       "args": ["--stdio"],
